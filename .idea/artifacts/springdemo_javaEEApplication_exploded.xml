@@ -1,0 +1,74 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="springdemo:javaEEApplication exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/springdemo_javaEEApplication_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="springdemo/javaeeApplication/javaEEApplication" />
+      <element id="module-output" name="springdemo" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Hibernate 5.4.1-5.4.1" />
+        <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
+        <element id="library" level="project" name="Struts 2-2.5.14.1" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/ognl.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/log4j.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-io.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/freemarker.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/txw2-2.3.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/antlr-2.7.7.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/dom4j-2.1.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/stax-ex-1.8.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-lang.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/struts2-core.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/ezmorph-1.0.3.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/jaxb-api-2.3.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/aopalliance-1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/classmate-1.3.4.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/byte-buddy-1.9.5.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-lang-2.3.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-fileupload.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/FastInfoset-1.2.15.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/jandex-2.0.5.Final.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/jaxb-runtime-2.3.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/json-lib-2.4-jdk15.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-logging-1.2.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/javassist-3.24.0-GA.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-httpclient-3.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-beanutils-1.7.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/commons-collections-3.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-tx-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-aop-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-jms-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-orm-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-oxm-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-web-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/hibernate-core-5.4.1.Final.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/javax.activation-api-1.2.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-core-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-jdbc-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-test-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-beans-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/istack-commons-runtime-3.0.7.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/struts2-json-plugin-2.5.14.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-aspects-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.7-bin.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/struts2-spring-plugin-2.5.14.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-messaging-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-expression-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-instrument-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/struts2-convention-plugin-2.5.14.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-context-support-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/com.springsource.org.aopalliance-1.0.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/com.springsource.org.apache.log4j-1.2.15.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.1.0.Final.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/com.springsource.org.apache.commons.logging-1.1.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar" />
+        <element id="file-copy" path="F:/Eviroment/tomcat/apache-tomcat-9.0.16/lib/servlet-api.jar" />
+      </element>
+      <element id="javaee-facet-resources" facet="springdemo/web/Web" />
+    </root>
+  </artifact>
+</component>

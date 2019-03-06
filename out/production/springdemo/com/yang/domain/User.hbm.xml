@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!-- 建立类与表的映射 -->
+    <class name="com.yang.domain.User" table="fuser">
+        <!-- 建立类中的属性与表中的主键对应 -->
+        <id name="id" column="id" >
+            <generator class="native"/>
+        </id>
+
+        <!-- 建立类中的普通的属性和表的字段的对应 -->
+        <property name="password" column="password"/>
+        <property name="account" column="account"/>
+        <property name="permission" column="permission"/>
+        <property name="nickname" column="nickname"/>
+
+        
+    </class>
+</hibernate-mapping>
