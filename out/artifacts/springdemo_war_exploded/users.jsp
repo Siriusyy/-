@@ -50,7 +50,7 @@
         $(document).ready(function () {
             <s:if test="%{#session.user!=null}">
             $("#user_table").bootstrapTable({
-                url: 'ShowUserServlet',         //请求后台的URL（*）
+                url: 'user_list.action',         //请求后台的URL（*）
                 method: 'post',                      //请求方式（*）
                 //toolbar: '#toolbar',                //工具按钮用哪个容器
                 striped: true,                      //是否显示行间隔色
@@ -106,12 +106,12 @@
 
         $(document).on('click', 'button[name="delete"]', function () {
             var id = $(this).parent().parent().children("td:eq(0)").text();
-            if (confirm("确认删除" + id)) {
+            if (confirm("确认删除id为" + id+"的用户么?")) {
                 //alert("执行删除");
                 $.ajax({
                     type: 'post',
-                    url: 'DeleteUserServlet',
-                    data: {id: id},
+                    url: 'user_delUser',
+                    data: {"user.id": id},
                     success: function (msg) {
                         alert(msg);
                         window.location.href = 'users.jsp';
@@ -233,15 +233,15 @@
                             <h4 class="modal-title" id="myModalLabel">添加用户</h4>
                         </div>
                         <div class="modal-body">
-                            <form method="post" action="InsertUserServlet">
+                            <form method="post" action="user_addUser.action">
                                 <label>账号</label>
-                                <input type="text" name="account" class="form-control">
+                                <input type="text" name="user.account" class="form-control">
                                 <label>昵称</label>
-                                <input type="text" name="nickname" class="form-control">
+                                <input type="text" name="user.nickname" class="form-control">
                                 <label>密码</label>
-                                <input type="password" name="password" class="form-control">
+                                <input type="password" name="user.password" class="form-control">
                                 <label>权限</label>
-                                <select name="permission" class="form-control">
+                                <select name="user.permission" class="form-control">
                                     <option selected="selected" value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>

@@ -44,19 +44,13 @@ public class DaoImpl extends HibernateDaoSupport implements FDao {
 
     @Override
     public User getUserbyId(int id) throws SQLException {
-        User user = null;
+        User user =null;
+        List <User> list = (List <User>) getHibernateTemplate().find("from  User u where  u.id = ?0", id);
 
-        Session session = HibernateUtils.getSession();
 
-        Transaction tx = session.beginTransaction();
-
-        Query query = session.createQuery("from User u where u.id = :id ");
-        query.setParameter("id", id);
-
-        user = (User) query.uniqueResult();
-
-        tx.commit();
-
+        if (list.size()>0){
+            user=list.get(0);
+        }
 
         //System.out.println(user.toString());
         return user;
@@ -65,17 +59,9 @@ public class DaoImpl extends HibernateDaoSupport implements FDao {
     @Override
     public boolean insertFileInfo(FileInfo fileInfo) throws SQLException {
 
-        Session session = HibernateUtils.getSession();
-
-        Transaction tx = session.beginTransaction();
-
-
-        session.save(fileInfo);
-
-        tx.commit();
+        getHibernateTemplate().save(fileInfo);
 
         return fileInfo.getId() != 0;
-
 
     }
 
@@ -94,32 +80,56 @@ public class DaoImpl extends HibernateDaoSupport implements FDao {
 
     @Override
     public int getFileIDByName(String fileName) throws SQLException {
-        return 0;
+        List <FileInfo> list = (List <FileInfo>) getHibernateTemplate().find("from FileInfo file where file.filename = ?0 ", fileName);
+
+        if (list.size()>0){
+            return list.get(0).getId();
+        }
+
+        return -1;
     }
 
     @Override
     public boolean insertOperationLog(int userID, int fileID, String type) throws SQLException {
-        return false;
+        OperationLog log=new OperationLog();
+        log.setUserid(userID);
+        log.setFileid(fileID);
+        log.setType(type);
+        getHibernateTemplate().save(log);
+        return log.getId()!=0;
     }
 
     @Override
     public boolean deleteFile(int fileID) throws SQLException {
-        return false;
+
+        FileInfo fileInfo = getHibernateTemplate().get(FileInfo.class, fileID);
+
+        if (fileInfo!=null) {
+
+            getHibernateTemplate().delete(fileInfo);
+        }
+        return true;
     }
 
     @Override
     public List <User> getUserList() throws SQLException {
-        return null;
+
+        return (List <User>) getHibernateTemplate().find("from User ");
     }
 
     @Override
-    public boolean deleteUser(int id) throws SQLException {
-        return false;
+    public boolean deleteUser(User user)  {
+        user = getHibernateTemplate().get(user.getClass(),user.getId());
+
+        if (user!=null) {
+            getHibernateTemplate().delete(user);
+        }
+        return true;
     }
 
     @Override
     public List <OperationLog> getAllOperateLogs() throws SQLException {
-        return null;
+        return (List <OperationLog>) getHibernateTemplate().find("from OperationLog ");
     }
 
     @Override
@@ -129,7 +139,8 @@ public class DaoImpl extends HibernateDaoSupport implements FDao {
 
     @Override
     public boolean insertUser(User user) throws SQLException {
-        return false;
+        getHibernateTemplate().save(user);
+        return user.getId()!=0;
     }
 
 

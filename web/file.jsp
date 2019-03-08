@@ -270,7 +270,7 @@
                 jsonT += "]";
                 $.ajax({
                     type: 'post',
-                    url: 'DeleteFileServlet',
+                    url: 'file_delete.action',
                     data: {file: jsonT},
                     success: function (msg) {
                         alert(msg);
@@ -289,7 +289,7 @@
             form.attr("style", "display:none");
             form.attr("target", "");
             form.attr("method", "get");
-            form.attr("action", "DownloadFileServlet");
+            form.attr("action", "file_download");
             var input1 = $("<input>");
             input1.attr("type", "hidden");
             input1.attr("name", "id");

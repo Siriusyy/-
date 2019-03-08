@@ -27,6 +27,9 @@
     <bean id="fileAction" class="com.yang.actions.FileAction" scope="prototype">
         <property name="service" ref="fservice"/>
     </bean>
+    <bean id="operationAction" class="com.yang.actions.OperationAction" scope="prototype">
+        <property name="service" ref="fservice"/>
+    </bean>
 
 
     <!-- 引入hibernate配置文件信息 -->

@@ -16,7 +16,7 @@ public interface FService {
 
     public boolean insertFileInfo(FileInfo fileInfo);
 
-    public boolean insertOperationLog(int userID, String fileName, String type);
+    public boolean insertOperationLog(int userID,String fileName,String type);
 
     public boolean deleteFile(int fileID);
 
@@ -26,7 +26,7 @@ public interface FService {
 
     boolean insertUser(User user);
 
-    boolean deleteUser(int id);
+    boolean deleteUser(User user);
 
     public List<OperationLog> getAllOperateLogs();
 

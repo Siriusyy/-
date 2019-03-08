@@ -79,7 +79,7 @@ public class FServiceImpl implements FService {
     }
 
     @Override
-    public boolean insertOperationLog(int userID, String fileName, String type) {
+    public boolean insertOperationLog(int userID,String fileName,String type) {
 
         try {
             int fileID = dao.getFileIDByName(fileName);
@@ -135,10 +135,10 @@ public class FServiceImpl implements FService {
     }
 
     @Override
-    public boolean deleteUser(int id) {
+    public boolean deleteUser(User user) {
 
         try {
-            return dao.deleteUser(id);
+            return dao.deleteUser(user);
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -20,7 +20,7 @@ public interface FDao {
     public boolean deleteFile(int fileID) throws SQLException;
     public List <User> getUserList() throws SQLException;
     public boolean insertUser(User user) throws SQLException;
-    public boolean deleteUser(int id) throws SQLException;
+    public boolean deleteUser(User user) throws SQLException;
     public List<OperationLog> getAllOperateLogs() throws SQLException;
     public boolean exportDatabaseTool(String hostIP, String userName, String password, String savePath, String fileName, String databaseName);
 }
